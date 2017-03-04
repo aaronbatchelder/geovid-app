@@ -6,52 +6,59 @@ provides-nominal:
 provides-member:
 - ["C6GeoVid14ViewController", ""]
 provides-dynamic-lookup:
-- "latitudeLabel"
 - "viewDidLoad"
-- "distanceTraveledLabel"
-- "altitudeLabel"
 - "verticalAccuracyLabel"
-- "didReceiveMemoryWarning"
 - "longitudeLabel"
+- "mapView"
+- "altitudeLabel"
+- "locationManager"
+- "locationManager"
+- "locationManager"
+- "latitudeLabel"
+- "distanceTraveledLabel"
 - "horizontalAccuracyLabel"
-- "locationManager"
-- "locationManager"
-- "locationManager"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- !private ">"
-- "AssignmentPrecedence"
-- !private "kCLLocationAccuracyBest"
-- "CLLocationManager"
-- !private "StringLiteralType"
-- "NSError"
-- !private "+"
-- !private "print"
-- !private "BooleanLiteralType"
-- !private "String"
-- !private "+="
-- !private "CLError"
-- "ViewController"
-- "UILabel"
+- "MKMapView"
+- !private "MKCoordinateRegionMakeWithDistance"
 - !private "<"
-- !private "UIAlertController"
-- "CLAuthorizationStatus"
-- !private "UIAlertAction"
-- "TernaryPrecedence"
+- !private "print"
+- !private "StringLiteralType"
 - "CLLocation"
-- "CLLocationManagerDelegate"
-- !private "-"
-- "UIViewController"
+- !private "+="
+- "ViewController"
+- !private "String"
 - !private "||"
+- !private "BooleanLiteralType"
+- !private "UIAlertController"
+- !private "+"
+- !private ">"
+- !private "kCLLocationAccuracyBest"
+- "CLLocationManagerDelegate"
+- "UILabel"
+- !private "Place"
+- "TernaryPrecedence"
+- !private "-"
+- !private "UIAlertAction"
+- !private "CLError"
+- "CLAuthorizationStatus"
+- "CLLocationManager"
 - "CastingPrecedence"
+- "UIViewController"
+- "NSError"
 - "CLLocationDistance"
+- "AssignmentPrecedence"
 - !private "=="
 depends-member:
 - !private ["Ps9AnyObject", "CLError"]
 - ["Ps9AnyObject", "CLLocationManager"]
+- !private ["Ps9AnyObject", "MKCoordinateRegionMakeWithDistance"]
+- !private ["Ps9AnyObject", "Place"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "UIAlertAction"]
 - !private ["Ps9AnyObject", "UIAlertController"]
 - !private ["Ps9AnyObject", "addAction"]
+- !private ["Ps9AnyObject", "addAnnotation"]
 - !private ["Ps9AnyObject", "altitude"]
 - ["Ps9AnyObject", "altitudeLabel"]
 - !private ["Ps9AnyObject", "code"]
@@ -71,10 +78,13 @@ depends-member:
 - ["Ps9AnyObject", "locationManagerDidResumeLocationUpdates"]
 - ["Ps9AnyObject", "locationManagerShouldDisplayHeadingCalibration"]
 - ["Ps9AnyObject", "longitudeLabel"]
+- ["Ps9AnyObject", "mapView"]
 - !private ["Ps9AnyObject", "present"]
 - ["Ps9AnyObject", "previousPoint"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "requestWhenInUseAuthorization"]
+- !private ["Ps9AnyObject", "setRegion"]
+- !private ["Ps9AnyObject", "showsUserLocation"]
 - !private ["Ps9AnyObject", "startUpdatingLocation"]
 - !private ["Ps9AnyObject", "stopUpdatingLocation"]
 - !private ["Ps9AnyObject", "text"]
@@ -117,6 +127,9 @@ depends-member:
 - !private ["Ps17BitwiseOperations", "_DisabledRangeIndex"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
+- !private ["PSo15CALayerDelegate", "addAnnotation"]
+- !private ["PSo15CALayerDelegate", "setRegion"]
+- !private ["PSo15CALayerDelegate", "showsUserLocation"]
 - !private ["PSo15CALayerDelegate", "text"]
 - ["OSC21CLAuthorizationStatus", "authorizedAlways"]
 - ["OSC21CLAuthorizationStatus", "authorizedWhenInUse"]
@@ -141,6 +154,8 @@ depends-member:
 - !private ["CSo17CLLocationManager", "stopUpdatingLocation"]
 - !private ["PSo25CLLocationManagerDelegate", "CLError"]
 - ["PSo25CLLocationManagerDelegate", "CLLocationManager"]
+- !private ["PSo25CLLocationManagerDelegate", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo25CLLocationManagerDelegate", "Place"]
 - !private ["PSo25CLLocationManagerDelegate", "String"]
 - !private ["PSo25CLLocationManagerDelegate", "UIAlertAction"]
 - !private ["PSo25CLLocationManagerDelegate", "UIAlertController"]
@@ -154,6 +169,7 @@ depends-member:
 - ["PSo25CLLocationManagerDelegate", "locationManagerDidResumeLocationUpdates"]
 - ["PSo25CLLocationManagerDelegate", "locationManagerShouldDisplayHeadingCalibration"]
 - !private ["PSo25CLLocationManagerDelegate", "longitudeLabel"]
+- !private ["PSo25CLLocationManagerDelegate", "mapView"]
 - !private ["PSo25CLLocationManagerDelegate", "present"]
 - !private ["PSo25CLLocationManagerDelegate", "previousPoint"]
 - !private ["PSo25CLLocationManagerDelegate", "print"]
@@ -165,6 +181,8 @@ depends-member:
 - !private ["Ps7CVarArg", "Index"]
 - !private ["Ps7CVarArg", "IndexDistance"]
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
+- !private ["Ps7CVarArg", "MKCoordinateRegionMakeWithDistance"]
+- !private ["Ps7CVarArg", "Place"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "SubSequence"]
@@ -173,6 +191,7 @@ depends-member:
 - !private ["Ps7CVarArg", "_DisabledRangeIndex"]
 - !private ["Ps7CVarArg", "_Element"]
 - !private ["Ps7CVarArg", "addAction"]
+- !private ["Ps7CVarArg", "addAnnotation"]
 - !private ["Ps7CVarArg", "altitude"]
 - ["Ps7CVarArg", "altitudeLabel"]
 - !private ["Ps7CVarArg", "code"]
@@ -193,10 +212,13 @@ depends-member:
 - ["Ps7CVarArg", "locationManagerDidResumeLocationUpdates"]
 - ["Ps7CVarArg", "locationManagerShouldDisplayHeadingCalibration"]
 - ["Ps7CVarArg", "longitudeLabel"]
+- ["Ps7CVarArg", "mapView"]
 - !private ["Ps7CVarArg", "present"]
 - ["Ps7CVarArg", "previousPoint"]
 - !private ["Ps7CVarArg", "print"]
 - !private ["Ps7CVarArg", "requestWhenInUseAuthorization"]
+- !private ["Ps7CVarArg", "setRegion"]
+- !private ["Ps7CVarArg", "showsUserLocation"]
 - !private ["Ps7CVarArg", "startUpdatingLocation"]
 - !private ["Ps7CVarArg", "stopUpdatingLocation"]
 - !private ["Ps7CVarArg", "subscript"]
@@ -228,12 +250,15 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "CLLocationManager"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
+- !private ["Ps28CustomDebugStringConvertible", "MKCoordinateRegionMakeWithDistance"]
+- !private ["Ps28CustomDebugStringConvertible", "Place"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertController"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "addAction"]
+- !private ["Ps28CustomDebugStringConvertible", "addAnnotation"]
 - !private ["Ps28CustomDebugStringConvertible", "altitude"]
 - ["Ps28CustomDebugStringConvertible", "altitudeLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "code"]
@@ -254,10 +279,13 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "locationManagerDidResumeLocationUpdates"]
 - ["Ps28CustomDebugStringConvertible", "locationManagerShouldDisplayHeadingCalibration"]
 - ["Ps28CustomDebugStringConvertible", "longitudeLabel"]
+- ["Ps28CustomDebugStringConvertible", "mapView"]
 - !private ["Ps28CustomDebugStringConvertible", "present"]
 - ["Ps28CustomDebugStringConvertible", "previousPoint"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "requestWhenInUseAuthorization"]
+- !private ["Ps28CustomDebugStringConvertible", "setRegion"]
+- !private ["Ps28CustomDebugStringConvertible", "showsUserLocation"]
 - !private ["Ps28CustomDebugStringConvertible", "startUpdatingLocation"]
 - !private ["Ps28CustomDebugStringConvertible", "stopUpdatingLocation"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
@@ -289,6 +317,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "MKCoordinateRegionMakeWithDistance"]
+- !private ["Ps23CustomStringConvertible", "Place"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
@@ -298,6 +328,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addAction"]
+- !private ["Ps23CustomStringConvertible", "addAnnotation"]
 - !private ["Ps23CustomStringConvertible", "altitude"]
 - ["Ps23CustomStringConvertible", "altitudeLabel"]
 - !private ["Ps23CustomStringConvertible", "code"]
@@ -318,10 +349,13 @@ depends-member:
 - ["Ps23CustomStringConvertible", "locationManagerDidResumeLocationUpdates"]
 - ["Ps23CustomStringConvertible", "locationManagerShouldDisplayHeadingCalibration"]
 - ["Ps23CustomStringConvertible", "longitudeLabel"]
+- ["Ps23CustomStringConvertible", "mapView"]
 - !private ["Ps23CustomStringConvertible", "present"]
 - ["Ps23CustomStringConvertible", "previousPoint"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "requestWhenInUseAuthorization"]
+- !private ["Ps23CustomStringConvertible", "setRegion"]
+- !private ["Ps23CustomStringConvertible", "showsUserLocation"]
 - !private ["Ps23CustomStringConvertible", "startUpdatingLocation"]
 - !private ["Ps23CustomStringConvertible", "stopUpdatingLocation"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
@@ -345,6 +379,8 @@ depends-member:
 - !private ["Ps9Equatable", "CLError"]
 - ["Ps9Equatable", "CLLocationManager"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "MKCoordinateRegionMakeWithDistance"]
+- !private ["Ps9Equatable", "Place"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "UIAlertAction"]
@@ -352,6 +388,7 @@ depends-member:
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addAction"]
+- !private ["Ps9Equatable", "addAnnotation"]
 - !private ["Ps9Equatable", "alert"]
 - !private ["Ps9Equatable", "altitude"]
 - ["Ps9Equatable", "altitudeLabel"]
@@ -376,11 +413,14 @@ depends-member:
 - ["Ps9Equatable", "locationManagerDidResumeLocationUpdates"]
 - ["Ps9Equatable", "locationManagerShouldDisplayHeadingCalibration"]
 - ["Ps9Equatable", "longitudeLabel"]
+- ["Ps9Equatable", "mapView"]
 - !private ["Ps9Equatable", "present"]
 - ["Ps9Equatable", "previousPoint"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "rawValue"]
 - !private ["Ps9Equatable", "requestWhenInUseAuthorization"]
+- !private ["Ps9Equatable", "setRegion"]
+- !private ["Ps9Equatable", "showsUserLocation"]
 - !private ["Ps9Equatable", "startUpdatingLocation"]
 - !private ["Ps9Equatable", "stopUpdatingLocation"]
 - !private ["Ps9Equatable", "text"]
@@ -409,6 +449,8 @@ depends-member:
 - !private ["Ps8Hashable", "CLError"]
 - ["Ps8Hashable", "CLLocationManager"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "MKCoordinateRegionMakeWithDistance"]
+- !private ["Ps8Hashable", "Place"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "UIAlertAction"]
@@ -416,6 +458,7 @@ depends-member:
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addAction"]
+- !private ["Ps8Hashable", "addAnnotation"]
 - !private ["Ps8Hashable", "alert"]
 - !private ["Ps8Hashable", "altitude"]
 - ["Ps8Hashable", "altitudeLabel"]
@@ -440,11 +483,14 @@ depends-member:
 - ["Ps8Hashable", "locationManagerDidResumeLocationUpdates"]
 - ["Ps8Hashable", "locationManagerShouldDisplayHeadingCalibration"]
 - ["Ps8Hashable", "longitudeLabel"]
+- ["Ps8Hashable", "mapView"]
 - !private ["Ps8Hashable", "present"]
 - ["Ps8Hashable", "previousPoint"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "rawValue"]
 - !private ["Ps8Hashable", "requestWhenInUseAuthorization"]
+- !private ["Ps8Hashable", "setRegion"]
+- !private ["Ps8Hashable", "showsUserLocation"]
 - !private ["Ps8Hashable", "startUpdatingLocation"]
 - !private ["Ps8Hashable", "stopUpdatingLocation"]
 - !private ["Ps8Hashable", "text"]
@@ -488,6 +534,11 @@ depends-member:
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["PSo12MKAnnotation", "init"]
+- ["VSC18MKCoordinateRegion", "deinit"]
+- !private ["CSo9MKMapView", "addAnnotation"]
+- !private ["CSo9MKMapView", "setRegion"]
+- !private ["CSo9MKMapView", "showsUserLocation"]
 - !private ["Ps10MirrorPath", "IntegerLiteralType"]
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
@@ -507,10 +558,13 @@ depends-member:
 - ["CSo7NSCoder", "deinit"]
 - !private ["PSo8NSCoding", "CLError"]
 - ["PSo8NSCoding", "CLLocationManager"]
+- !private ["PSo8NSCoding", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo8NSCoding", "Place"]
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "UIAlertAction"]
 - !private ["PSo8NSCoding", "UIAlertController"]
 - !private ["PSo8NSCoding", "addAction"]
+- !private ["PSo8NSCoding", "addAnnotation"]
 - !private ["PSo8NSCoding", "altitude"]
 - ["PSo8NSCoding", "altitudeLabel"]
 - !private ["PSo8NSCoding", "code"]
@@ -528,9 +582,12 @@ depends-member:
 - ["PSo8NSCoding", "locationManagerDidResumeLocationUpdates"]
 - ["PSo8NSCoding", "locationManagerShouldDisplayHeadingCalibration"]
 - ["PSo8NSCoding", "longitudeLabel"]
+- ["PSo8NSCoding", "mapView"]
 - !private ["PSo8NSCoding", "present"]
 - ["PSo8NSCoding", "previousPoint"]
 - !private ["PSo8NSCoding", "print"]
+- !private ["PSo8NSCoding", "setRegion"]
+- !private ["PSo8NSCoding", "showsUserLocation"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "totalMovementDistance"]
 - !private ["PSo8NSCoding", "verticalAccuracy"]
@@ -547,6 +604,8 @@ depends-member:
 - !private ["CSo7NSError", "code"]
 - !private ["PSo26NSExtensionRequestHandling", "CLError"]
 - ["PSo26NSExtensionRequestHandling", "CLLocationManager"]
+- !private ["PSo26NSExtensionRequestHandling", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo26NSExtensionRequestHandling", "Place"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
@@ -563,6 +622,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "locationManagerDidResumeLocationUpdates"]
 - ["PSo26NSExtensionRequestHandling", "locationManagerShouldDisplayHeadingCalibration"]
 - ["PSo26NSExtensionRequestHandling", "longitudeLabel"]
+- ["PSo26NSExtensionRequestHandling", "mapView"]
 - !private ["PSo26NSExtensionRequestHandling", "present"]
 - ["PSo26NSExtensionRequestHandling", "previousPoint"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
@@ -576,12 +636,16 @@ depends-member:
 - ["CSo8NSObject", "CLLocation"]
 - ["CSo8NSObject", "CLLocationDistance"]
 - ["CSo8NSObject", "CLLocationManager"]
+- !private ["CSo8NSObject", "MKCoordinateRegionMakeWithDistance"]
+- ["CSo8NSObject", "MKMapView"]
 - ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "Place"]
 - !private ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "UIAlertAction"]
 - !private ["CSo8NSObject", "UIAlertController"]
 - ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "addAction"]
+- !private ["CSo8NSObject", "addAnnotation"]
 - !private ["CSo8NSObject", "altitude"]
 - ["CSo8NSObject", "altitudeLabel"]
 - !private ["CSo8NSObject", "code"]
@@ -601,10 +665,13 @@ depends-member:
 - ["CSo8NSObject", "locationManagerDidResumeLocationUpdates"]
 - ["CSo8NSObject", "locationManagerShouldDisplayHeadingCalibration"]
 - ["CSo8NSObject", "longitudeLabel"]
+- ["CSo8NSObject", "mapView"]
 - !private ["CSo8NSObject", "present"]
 - ["CSo8NSObject", "previousPoint"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "requestWhenInUseAuthorization"]
+- !private ["CSo8NSObject", "setRegion"]
+- !private ["CSo8NSObject", "showsUserLocation"]
 - !private ["CSo8NSObject", "startUpdatingLocation"]
 - !private ["CSo8NSObject", "stopUpdatingLocation"]
 - !private ["CSo8NSObject", "text"]
@@ -614,10 +681,13 @@ depends-member:
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "CLError"]
 - ["PSo16NSObjectProtocol", "CLLocationManager"]
+- !private ["PSo16NSObjectProtocol", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo16NSObjectProtocol", "Place"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "UIAlertAction"]
 - !private ["PSo16NSObjectProtocol", "UIAlertController"]
 - !private ["PSo16NSObjectProtocol", "addAction"]
+- !private ["PSo16NSObjectProtocol", "addAnnotation"]
 - !private ["PSo16NSObjectProtocol", "altitude"]
 - ["PSo16NSObjectProtocol", "altitudeLabel"]
 - !private ["PSo16NSObjectProtocol", "code"]
@@ -637,10 +707,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "locationManagerDidResumeLocationUpdates"]
 - ["PSo16NSObjectProtocol", "locationManagerShouldDisplayHeadingCalibration"]
 - ["PSo16NSObjectProtocol", "longitudeLabel"]
+- ["PSo16NSObjectProtocol", "mapView"]
 - !private ["PSo16NSObjectProtocol", "present"]
 - ["PSo16NSObjectProtocol", "previousPoint"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "requestWhenInUseAuthorization"]
+- !private ["PSo16NSObjectProtocol", "setRegion"]
+- !private ["PSo16NSObjectProtocol", "showsUserLocation"]
 - !private ["PSo16NSObjectProtocol", "startUpdatingLocation"]
 - !private ["PSo16NSObjectProtocol", "stopUpdatingLocation"]
 - !private ["PSo16NSObjectProtocol", "text"]
@@ -658,6 +731,8 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "verticalAccuracy"]
 - !private ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
+- ["C6GeoVid5Place", "deinit"]
+- !private ["C6GeoVid5Place", "init"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Indices"]
@@ -724,6 +799,9 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "addAnnotation"]
+- !private ["PSo29UIAccessibilityIdentification", "setRegion"]
+- !private ["PSo29UIAccessibilityIdentification", "showsUserLocation"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - ["CSo13UIAlertAction", "deinit"]
 - !private ["CSo13UIAlertAction", "init"]
@@ -734,13 +812,19 @@ depends-member:
 - !private ["CSo17UIAlertController", "init"]
 - !private ["OSC22UIAlertControllerStyle", "alert"]
 - ["OSC22UIAlertControllerStyle", "deinit"]
+- !private ["PSo12UIAppearance", "addAnnotation"]
+- !private ["PSo12UIAppearance", "setRegion"]
+- !private ["PSo12UIAppearance", "showsUserLocation"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo21UIAppearanceContainer", "CLError"]
 - ["PSo21UIAppearanceContainer", "CLLocationManager"]
+- !private ["PSo21UIAppearanceContainer", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo21UIAppearanceContainer", "Place"]
 - !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertController"]
 - !private ["PSo21UIAppearanceContainer", "addAction"]
+- !private ["PSo21UIAppearanceContainer", "addAnnotation"]
 - ["PSo21UIAppearanceContainer", "altitudeLabel"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "distanceTraveledLabel"]
@@ -753,9 +837,12 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "locationManagerDidResumeLocationUpdates"]
 - ["PSo21UIAppearanceContainer", "locationManagerShouldDisplayHeadingCalibration"]
 - ["PSo21UIAppearanceContainer", "longitudeLabel"]
+- ["PSo21UIAppearanceContainer", "mapView"]
 - !private ["PSo21UIAppearanceContainer", "present"]
 - ["PSo21UIAppearanceContainer", "previousPoint"]
 - !private ["PSo21UIAppearanceContainer", "print"]
+- !private ["PSo21UIAppearanceContainer", "setRegion"]
+- !private ["PSo21UIAppearanceContainer", "showsUserLocation"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "totalMovementDistance"]
 - ["PSo21UIAppearanceContainer", "verticalAccuracyLabel"]
@@ -763,6 +850,8 @@ depends-member:
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["PSo18UIContentContainer", "CLError"]
 - ["PSo18UIContentContainer", "CLLocationManager"]
+- !private ["PSo18UIContentContainer", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo18UIContentContainer", "Place"]
 - !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "UIAlertAction"]
 - !private ["PSo18UIContentContainer", "UIAlertController"]
@@ -779,6 +868,7 @@ depends-member:
 - ["PSo18UIContentContainer", "locationManagerDidResumeLocationUpdates"]
 - ["PSo18UIContentContainer", "locationManagerShouldDisplayHeadingCalibration"]
 - ["PSo18UIContentContainer", "longitudeLabel"]
+- ["PSo18UIContentContainer", "mapView"]
 - !private ["PSo18UIContentContainer", "present"]
 - ["PSo18UIContentContainer", "previousPoint"]
 - !private ["PSo18UIContentContainer", "print"]
@@ -787,14 +877,23 @@ depends-member:
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["PSo17UICoordinateSpace", "addAnnotation"]
+- !private ["PSo17UICoordinateSpace", "setRegion"]
+- !private ["PSo17UICoordinateSpace", "showsUserLocation"]
 - !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "addAnnotation"]
+- !private ["PSo13UIDynamicItem", "setRegion"]
+- !private ["PSo13UIDynamicItem", "showsUserLocation"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo18UIFocusEnvironment", "CLError"]
 - ["PSo18UIFocusEnvironment", "CLLocationManager"]
+- !private ["PSo18UIFocusEnvironment", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo18UIFocusEnvironment", "Place"]
 - !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertController"]
 - !private ["PSo18UIFocusEnvironment", "addAction"]
+- !private ["PSo18UIFocusEnvironment", "addAnnotation"]
 - ["PSo18UIFocusEnvironment", "altitudeLabel"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "distanceTraveledLabel"]
@@ -807,14 +906,20 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "locationManagerDidResumeLocationUpdates"]
 - ["PSo18UIFocusEnvironment", "locationManagerShouldDisplayHeadingCalibration"]
 - ["PSo18UIFocusEnvironment", "longitudeLabel"]
+- ["PSo18UIFocusEnvironment", "mapView"]
 - !private ["PSo18UIFocusEnvironment", "present"]
 - ["PSo18UIFocusEnvironment", "previousPoint"]
 - !private ["PSo18UIFocusEnvironment", "print"]
+- !private ["PSo18UIFocusEnvironment", "setRegion"]
+- !private ["PSo18UIFocusEnvironment", "showsUserLocation"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "totalMovementDistance"]
 - ["PSo18UIFocusEnvironment", "verticalAccuracyLabel"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "addAnnotation"]
+- !private ["PSo11UIFocusItem", "setRegion"]
+- !private ["PSo11UIFocusItem", "showsUserLocation"]
 - !private ["PSo11UIFocusItem", "text"]
 - !private ["CSo7UILabel", "text"]
 - ["CSo11UIResponder", "CLAuthorizationStatus"]
@@ -822,12 +927,16 @@ depends-member:
 - ["CSo11UIResponder", "CLLocation"]
 - ["CSo11UIResponder", "CLLocationDistance"]
 - ["CSo11UIResponder", "CLLocationManager"]
+- !private ["CSo11UIResponder", "MKCoordinateRegionMakeWithDistance"]
+- ["CSo11UIResponder", "MKMapView"]
 - ["CSo11UIResponder", "NSError"]
+- !private ["CSo11UIResponder", "Place"]
 - !private ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "UIAlertAction"]
 - !private ["CSo11UIResponder", "UIAlertController"]
 - ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "addAction"]
+- !private ["CSo11UIResponder", "addAnnotation"]
 - ["CSo11UIResponder", "altitudeLabel"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "distanceTraveledLabel"]
@@ -840,19 +949,25 @@ depends-member:
 - ["CSo11UIResponder", "locationManagerDidResumeLocationUpdates"]
 - ["CSo11UIResponder", "locationManagerShouldDisplayHeadingCalibration"]
 - ["CSo11UIResponder", "longitudeLabel"]
+- ["CSo11UIResponder", "mapView"]
 - !private ["CSo11UIResponder", "present"]
 - ["CSo11UIResponder", "previousPoint"]
 - !private ["CSo11UIResponder", "print"]
+- !private ["CSo11UIResponder", "setRegion"]
+- !private ["CSo11UIResponder", "showsUserLocation"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "totalMovementDistance"]
 - ["CSo11UIResponder", "verticalAccuracyLabel"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["PSo30UIResponderStandardEditActions", "CLError"]
 - ["PSo30UIResponderStandardEditActions", "CLLocationManager"]
+- !private ["PSo30UIResponderStandardEditActions", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo30UIResponderStandardEditActions", "Place"]
 - !private ["PSo30UIResponderStandardEditActions", "String"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertAction"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertController"]
 - !private ["PSo30UIResponderStandardEditActions", "addAction"]
+- !private ["PSo30UIResponderStandardEditActions", "addAnnotation"]
 - ["PSo30UIResponderStandardEditActions", "altitudeLabel"]
 - ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
 - ["PSo30UIResponderStandardEditActions", "distanceTraveledLabel"]
@@ -865,9 +980,12 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "locationManagerDidResumeLocationUpdates"]
 - ["PSo30UIResponderStandardEditActions", "locationManagerShouldDisplayHeadingCalibration"]
 - ["PSo30UIResponderStandardEditActions", "longitudeLabel"]
+- ["PSo30UIResponderStandardEditActions", "mapView"]
 - !private ["PSo30UIResponderStandardEditActions", "present"]
 - ["PSo30UIResponderStandardEditActions", "previousPoint"]
 - !private ["PSo30UIResponderStandardEditActions", "print"]
+- !private ["PSo30UIResponderStandardEditActions", "setRegion"]
+- !private ["PSo30UIResponderStandardEditActions", "showsUserLocation"]
 - !private ["PSo30UIResponderStandardEditActions", "text"]
 - ["PSo30UIResponderStandardEditActions", "totalMovementDistance"]
 - ["PSo30UIResponderStandardEditActions", "verticalAccuracyLabel"]
@@ -875,6 +993,8 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", ""]
 - !private ["PSo16UIStateRestoring", "CLError"]
 - ["PSo16UIStateRestoring", "CLLocationManager"]
+- !private ["PSo16UIStateRestoring", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo16UIStateRestoring", "Place"]
 - !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "UIAlertAction"]
 - !private ["PSo16UIStateRestoring", "UIAlertController"]
@@ -891,6 +1011,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "locationManagerDidResumeLocationUpdates"]
 - ["PSo16UIStateRestoring", "locationManagerShouldDisplayHeadingCalibration"]
 - ["PSo16UIStateRestoring", "longitudeLabel"]
+- ["PSo16UIStateRestoring", "mapView"]
 - !private ["PSo16UIStateRestoring", "present"]
 - ["PSo16UIStateRestoring", "previousPoint"]
 - !private ["PSo16UIStateRestoring", "print"]
@@ -900,10 +1021,13 @@ depends-member:
 - ["PSo16UIStateRestoring", ""]
 - !private ["PSo18UITraitEnvironment", "CLError"]
 - ["PSo18UITraitEnvironment", "CLLocationManager"]
+- !private ["PSo18UITraitEnvironment", "MKCoordinateRegionMakeWithDistance"]
+- !private ["PSo18UITraitEnvironment", "Place"]
 - !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "UIAlertAction"]
 - !private ["PSo18UITraitEnvironment", "UIAlertController"]
 - !private ["PSo18UITraitEnvironment", "addAction"]
+- !private ["PSo18UITraitEnvironment", "addAnnotation"]
 - ["PSo18UITraitEnvironment", "altitudeLabel"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "distanceTraveledLabel"]
@@ -916,21 +1040,30 @@ depends-member:
 - ["PSo18UITraitEnvironment", "locationManagerDidResumeLocationUpdates"]
 - ["PSo18UITraitEnvironment", "locationManagerShouldDisplayHeadingCalibration"]
 - ["PSo18UITraitEnvironment", "longitudeLabel"]
+- ["PSo18UITraitEnvironment", "mapView"]
 - !private ["PSo18UITraitEnvironment", "present"]
 - ["PSo18UITraitEnvironment", "previousPoint"]
 - !private ["PSo18UITraitEnvironment", "print"]
+- !private ["PSo18UITraitEnvironment", "setRegion"]
+- !private ["PSo18UITraitEnvironment", "showsUserLocation"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "totalMovementDistance"]
 - ["PSo18UITraitEnvironment", "verticalAccuracyLabel"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "addAnnotation"]
+- !private ["CSo6UIView", "setRegion"]
+- !private ["CSo6UIView", "showsUserLocation"]
 - !private ["CSo6UIView", "text"]
 - ["CSo16UIViewController", "CLAuthorizationStatus"]
 - !private ["CSo16UIViewController", "CLError"]
 - ["CSo16UIViewController", "CLLocation"]
 - ["CSo16UIViewController", "CLLocationDistance"]
 - ["CSo16UIViewController", "CLLocationManager"]
+- !private ["CSo16UIViewController", "MKCoordinateRegionMakeWithDistance"]
+- ["CSo16UIViewController", "MKMapView"]
 - ["CSo16UIViewController", "NSError"]
+- !private ["CSo16UIViewController", "Place"]
 - !private ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "UIAlertAction"]
 - !private ["CSo16UIViewController", "UIAlertController"]
@@ -949,6 +1082,7 @@ depends-member:
 - ["CSo16UIViewController", "locationManagerDidResumeLocationUpdates"]
 - ["CSo16UIViewController", "locationManagerShouldDisplayHeadingCalibration"]
 - ["CSo16UIViewController", "longitudeLabel"]
+- ["CSo16UIViewController", "mapView"]
 - !private ["CSo16UIViewController", "present"]
 - ["CSo16UIViewController", "previousPoint"]
 - !private ["CSo16UIViewController", "print"]
@@ -967,7 +1101,10 @@ depends-member:
 - ["C6GeoVid14ViewController", "CLLocation"]
 - ["C6GeoVid14ViewController", "CLLocationDistance"]
 - ["C6GeoVid14ViewController", "CLLocationManager"]
+- !private ["C6GeoVid14ViewController", "MKCoordinateRegionMakeWithDistance"]
+- ["C6GeoVid14ViewController", "MKMapView"]
 - ["C6GeoVid14ViewController", "NSError"]
+- !private ["C6GeoVid14ViewController", "Place"]
 - !private ["C6GeoVid14ViewController", "String"]
 - !private ["C6GeoVid14ViewController", "UIAlertAction"]
 - !private ["C6GeoVid14ViewController", "UIAlertController"]
@@ -985,6 +1122,7 @@ depends-member:
 - ["C6GeoVid14ViewController", "locationManagerDidResumeLocationUpdates"]
 - ["C6GeoVid14ViewController", "locationManagerShouldDisplayHeadingCalibration"]
 - ["C6GeoVid14ViewController", "longitudeLabel"]
+- ["C6GeoVid14ViewController", "mapView"]
 - !private ["C6GeoVid14ViewController", "present"]
 - !private ["C6GeoVid14ViewController", "previousPoint"]
 - !private ["C6GeoVid14ViewController", "print"]
@@ -998,6 +1136,9 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "count"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
 - !private ["P10Foundation21_BridgedStoredNSError", "denied"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "addAnnotation"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setRegion"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "showsUserLocation"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
@@ -1018,6 +1159,8 @@ depends-member:
 - !private ["Ps9_Hashable", "CLError"]
 - ["Ps9_Hashable", "CLLocationManager"]
 - !private ["Ps9_Hashable", "IntegerLiteralType"]
+- !private ["Ps9_Hashable", "MKCoordinateRegionMakeWithDistance"]
+- !private ["Ps9_Hashable", "Place"]
 - !private ["Ps9_Hashable", "Stride"]
 - !private ["Ps9_Hashable", "String"]
 - !private ["Ps9_Hashable", "UIAlertAction"]
@@ -1025,6 +1168,7 @@ depends-member:
 - !private ["Ps9_Hashable", "_DisabledRangeIndex"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "addAction"]
+- !private ["Ps9_Hashable", "addAnnotation"]
 - !private ["Ps9_Hashable", "alert"]
 - !private ["Ps9_Hashable", "altitude"]
 - ["Ps9_Hashable", "altitudeLabel"]
@@ -1049,11 +1193,14 @@ depends-member:
 - ["Ps9_Hashable", "locationManagerDidResumeLocationUpdates"]
 - ["Ps9_Hashable", "locationManagerShouldDisplayHeadingCalibration"]
 - ["Ps9_Hashable", "longitudeLabel"]
+- ["Ps9_Hashable", "mapView"]
 - !private ["Ps9_Hashable", "present"]
 - ["Ps9_Hashable", "previousPoint"]
 - !private ["Ps9_Hashable", "print"]
 - !private ["Ps9_Hashable", "rawValue"]
 - !private ["Ps9_Hashable", "requestWhenInUseAuthorization"]
+- !private ["Ps9_Hashable", "setRegion"]
+- !private ["Ps9_Hashable", "showsUserLocation"]
 - !private ["Ps9_Hashable", "startUpdatingLocation"]
 - !private ["Ps9_Hashable", "stopUpdatingLocation"]
 - !private ["Ps9_Hashable", "text"]
@@ -1148,6 +1295,9 @@ depends-nominal:
 - !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
 - !private "Ps25LosslessStringConvertible"
+- !private "PSo12MKAnnotation"
+- "VSC18MKCoordinateRegion"
+- !private "CSo9MKMapView"
 - !private "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
 - !private "Ps16MutableIndexable"
@@ -1162,6 +1312,7 @@ depends-nominal:
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - "Sq"
+- "C6GeoVid5Place"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps21RandomAccessIndexable"
 - !private "Vs17RandomAccessSlice"
@@ -1230,13 +1381,14 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
-interface-hash: "e11d7e61e9700b5ae596251976fb1938"
+interface-hash: "777081e5520b9ae8b7ebde22dc5fd39d"

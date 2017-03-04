@@ -116,6 +116,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import ObjectiveC;
+@import MapKit;
 @import CoreLocation;
 #endif
 
@@ -136,7 +138,18 @@ SWIFT_CLASS("_TtC6GeoVid11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC6GeoVid5Place")
+@interface Place : NSObject <MKAnnotation>
+@property (nonatomic, readonly, copy) NSString * _Nullable title;
+@property (nonatomic, readonly, copy) NSString * _Nullable subtitle;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
+- (nonnull instancetype)initWithTitle:(NSString * _Nonnull)title subtitle:(NSString * _Nonnull)subtitle coordinate:(CLLocationCoordinate2D)coordinate OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
 @class UILabel;
+@class MKMapView;
 @class CLLocationManager;
 @class NSError;
 @class CLLocation;
@@ -151,6 +164,7 @@ SWIFT_CLASS("_TtC6GeoVid14ViewController")
 @property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified altitudeLabel;
 @property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified verticalAccuracyLabel;
 @property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified distanceTraveledLabel;
+@property (nonatomic, strong) IBOutlet MKMapView * _Nullable mapView;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didFailWithError:(NSError * _Null_unspecified)error;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
