@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02B703221E69EEE100A1AB2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B703211E69EEE100A1AB2E /* AppDelegate.swift */; };
+		02B703241E69EEE100A1AB2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B703231E69EEE100A1AB2E /* ViewController.swift */; };
+		02B703271E69EEE100A1AB2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B703251E69EEE100A1AB2E /* Main.storyboard */; };
+		02B703291E69EEE100A1AB2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02B703281E69EEE100A1AB2E /* Assets.xcassets */; };
+		02B7032C1E69EEE100A1AB2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B7032A1E69EEE100A1AB2E /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02B7031E1E69EEE100A1AB2E /* GeoVid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoVid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02B703211E69EEE100A1AB2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		02B703231E69EEE100A1AB2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02B703261E69EEE100A1AB2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02B703281E69EEE100A1AB2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02B7032B1E69EEE100A1AB2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02B7032D1E69EEE100A1AB2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02B7031B1E69EEE100A1AB2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02B703151E69EEE100A1AB2E = {
+			isa = PBXGroup;
+			children = (
+				02B703201E69EEE100A1AB2E /* GeoVid */,
+				02B7031F1E69EEE100A1AB2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02B7031F1E69EEE100A1AB2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02B7031E1E69EEE100A1AB2E /* GeoVid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02B703201E69EEE100A1AB2E /* GeoVid */ = {
+			isa = PBXGroup;
+			children = (
+				02B703211E69EEE100A1AB2E /* AppDelegate.swift */,
+				02B703231E69EEE100A1AB2E /* ViewController.swift */,
+				02B703251E69EEE100A1AB2E /* Main.storyboard */,
+				02B703281E69EEE100A1AB2E /* Assets.xcassets */,
+				02B7032A1E69EEE100A1AB2E /* LaunchScreen.storyboard */,
+				02B7032D1E69EEE100A1AB2E /* Info.plist */,
+			);
+			path = GeoVid;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02B7031D1E69EEE100A1AB2E /* GeoVid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02B703301E69EEE100A1AB2E /* Build configuration list for PBXNativeTarget "GeoVid" */;
+			buildPhases = (
+				02B7031A1E69EEE100A1AB2E /* Sources */,
+				02B7031B1E69EEE100A1AB2E /* Frameworks */,
+				02B7031C1E69EEE100A1AB2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoVid;
+			productName = GeoVid;
+			productReference = 02B7031E1E69EEE100A1AB2E /* GeoVid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02B703161E69EEE100A1AB2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Aaron Batchelder";
+				TargetAttributes = {
+					02B7031D1E69EEE100A1AB2E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 675N2ZZM6D;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 02B703191E69EEE100A1AB2E /* Build configuration list for PBXProject "GeoVid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02B703151E69EEE100A1AB2E;
+			productRefGroup = 02B7031F1E69EEE100A1AB2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02B7031D1E69EEE100A1AB2E /* GeoVid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02B7031C1E69EEE100A1AB2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02B7032C1E69EEE100A1AB2E /* LaunchScreen.storyboard in Resources */,
+				02B703291E69EEE100A1AB2E /* Assets.xcassets in Resources */,
+				02B703271E69EEE100A1AB2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02B7031A1E69EEE100A1AB2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02B703241E69EEE100A1AB2E /* ViewController.swift in Sources */,
+				02B703221E69EEE100A1AB2E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02B703251E69EEE100A1AB2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02B703261E69EEE100A1AB2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02B7032A1E69EEE100A1AB2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02B7032B1E69EEE100A1AB2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02B7032E1E69EEE100A1AB2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		02B7032F1E69EEE100A1AB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02B703311E69EEE100A1AB2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 675N2ZZM6D;
+				INFOPLIST_FILE = GeoVid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronbatchelder.GeoVid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		02B703321E69EEE100A1AB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 675N2ZZM6D;
+				INFOPLIST_FILE = GeoVid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronbatchelder.GeoVid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02B703191E69EEE100A1AB2E /* Build configuration list for PBXProject "GeoVid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02B7032E1E69EEE100A1AB2E /* Debug */,
+				02B7032F1E69EEE100A1AB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02B703301E69EEE100A1AB2E /* Build configuration list for PBXNativeTarget "GeoVid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02B703311E69EEE100A1AB2E /* Debug */,
+				02B703321E69EEE100A1AB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02B703161E69EEE100A1AB2E /* Project object */;
+}
