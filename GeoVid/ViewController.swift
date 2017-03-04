@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -21,6 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var altitudeLabel:UILabel!
     @IBOutlet var verticalAccuracyLabel:UILabel!
     @IBOutlet var distanceTraveledLabel:UILabel!
+    @IBOutlet var mapView:MKMapView?
     
     
     // Delegate Methods
@@ -32,15 +34,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         switch status {
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
+            mapView?.showsUserLocation = true
             
         default:
             locationManager.stopUpdatingLocation()
+            mapView?.showsUserLocation = false
         }
     }
 
     
-    func locationManager(_ manager: CLLocationManager,
-                                 didFailWithError error: NSError!) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: NSError!) {
         let errorType = error.code == CLError.denied.rawValue
                         ? "Access Denied": "Error \(error.code)"
         
@@ -83,6 +86,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         if previousPoint == nil {
             totalMovementDistance = 0
+            
+            let start = Place(title: "Start Point", subtitle: "This is where we started", coordinate: newLocation.coordinate)
+            mapView?.addAnnotation(start)
+            
+            let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 100, 100)
+            mapView?.setRegion(region, animated: true)
+            
         } else {
             print("movement distance: " +
                 "\(newLocation.distance(from: previousPoint!))")

@@ -22,7 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eY9-02-wRO" userLabel="Lower View">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JtH-wg-937">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eY9-02-wRO" userLabel="Lower View">
                                 <rect key="frame" x="0.0" y="480" width="375" height="187"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-WA-y1b">
@@ -176,6 +180,7 @@
                         <outlet property="horizontalAccuracyLabel" destination="nAg-Fa-OUE" id="l0Q-Df-vPZ"/>
                         <outlet property="latitudeLabel" destination="q8f-WA-y1b" id="HJI-4i-PvI"/>
                         <outlet property="longitudeLabel" destination="29O-aP-H0Q" id="Yix-Wk-Jhk"/>
+                        <outlet property="mapView" destination="JtH-wg-937" id="0Ge-sI-xKG"/>
                         <outlet property="verticalAccuracyLabel" destination="iB0-w5-dTc" id="vEs-J3-ONn"/>
                     </connections>
                 </viewController>
