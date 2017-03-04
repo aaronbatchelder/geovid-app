@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
-options: "50876d19436540ec49168d5152977c23"
-build_time: [541965673, 349160000]
-inputs:
-  "/Users/aaronbatchelder/Desktop/GeoVid/GeoVid/GeoVid/ViewController.swift": [541965664, 0]
-  "/Users/aaronbatchelder/Desktop/GeoVid/GeoVid/GeoVid/AppDelegate.swift": [541881313, 0]

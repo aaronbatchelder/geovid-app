@@ -7,21 +7,21 @@ provides-member:
 - ["C6GeoVid11AppDelegate", ""]
 provides-dynamic-lookup:
 - "applicationWillResignActive"
-- "applicationDidBecomeActive"
-- "window"
-- "applicationWillTerminate"
-- "applicationDidEnterBackground"
 - "applicationWillEnterForeground"
+- "applicationDidEnterBackground"
 - "application"
+- "applicationWillTerminate"
+- "window"
+- "applicationDidBecomeActive"
 depends-top-level:
+- "UIWindow"
 - "UIApplicationLaunchOptionsKey"
 - "AppDelegate"
-- "UIApplicationDelegate"
-- "UIApplication"
 - !private "BooleanLiteralType"
-- "UIResponder"
+- "UIApplication"
 - "Bool"
-- "UIWindow"
+- "UIResponder"
+- "UIApplicationDelegate"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
